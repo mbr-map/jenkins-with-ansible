@@ -2,6 +2,12 @@
 - hosts: all
   gather_facts: no
   become: true
+  vars:
+   firstName: MBR
+   lastName: BHARATHREDDY
+   companyName: MAPR@MBR
+   contact_details: mapr_mbr@gmail.com, 987654321
+   address: Bangalore,KA
   tasks:
   - name: install the httpd server
     yum:
@@ -15,5 +21,5 @@
     service:
      name: httpd
      state: restarted
-     
+
 ...
